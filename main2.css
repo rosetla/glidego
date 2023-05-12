@@ -5,24 +5,23 @@
     font-family: "Roboto",sans-serif;
 }
 body{
-    padding-bottom: 200px;
-    position: relative;
     min-height: 100vh;
 }
-.container{
-    position: fixed;
+.navbar{ 
+    position: sticky;
     width: 100%;
-    top: 0px;
-    z-index: 1;
+    top: 0;
+    z-index: 100;
 }
+
 header{
     background-color: orange;
     max-height: 80px;
 }
 header img{
-    margin-left: 150px;
+    padding-left: 150px;
     height: 80px; /* Đặt chiều cao tối đa của hình ảnh */
-    padding-bottom: 0px;
+    
 }
 header h2{
     font-family: 'Alkatra', cursive;

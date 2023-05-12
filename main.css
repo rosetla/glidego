@@ -1,29 +1,27 @@
 *{
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    padding: 0%;
+    margin: 0%;
     font-family: "Roboto",sans-serif;
 }
 body{
-    padding-bottom: 200px;
-    position: relative;
     min-height: 100vh;
+    
 }
-
-.container{
-    position: fixed;
+.navbar{
+    position: sticky;
     width: 100%;
-    top: 0px;
-    z-index: 1;
+    top: 0;
+    z-index: 100;
 }
 header{
     background-color: orange;
     max-height: 80px;
 }
 header img{
-    margin-left: 150px;
+    padding-left: 150px;
     height: 80px; /* Đặt chiều cao tối đa của hình ảnh */
-    padding-bottom: 0px;
+    
 }
 header h2{
     font-family: 'Alkatra', cursive;
@@ -82,14 +80,15 @@ input[type="text"]{
     font-size: 15px;
     margin-left: -25px;
 }
+#search-btn:active{
+    color: orange;
+}
 .slideshow{
-    margin-top: 125px;
     width: 100%;
     height: 500px;
     overflow: hidden;
     position: relative;
 }
-
 .navigation{
     position: absolute;
     bottom: 10px;
@@ -175,6 +174,9 @@ input[name="bottom"]{
     background-color: orange;
     font-weight: bold;
 }
+.gt2 a:active{
+    background-color: rgb(195, 127, 0);
+}
 .Slide2{
     background: none;
     width: 80%;
@@ -231,6 +233,88 @@ article .news-list .news-item{
     height: 1.5px;
     width: 33%;
 }
+.custom-divider5{
+    margin: 20px 0;
+    color: #01506e;
+    font-size: x-large;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.custom-divider5::before, .custom-divider5::after{
+    content: "";
+    background: gainsboro;
+    height: 1.5px;
+    width: 37%;
+}
+.lable p{
+    color: white;
+    margin-top: 5px;
+    margin-bottom: -15px;
+}
+
+.dacxe{
+    position: relative;
+}
+
+.form-dat-ve{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 20px;
+}
+.left {
+    width: 50%;
+    margin-left: 20px;
+}
+  
+.right {
+    width: 50%;
+}
+.row-form {
+    display: flex;
+    justify-content: space-between;
+}
+.iinput{
+    border: none;
+    outline: none;
+    width: 95%;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+.submit-xe{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 20px;
+    transform: translate(345%);
+    background-color: #01506e;
+}
+.submit-xe:hover{
+    background-color: orange;
+    color: #01506e;
+}
+.submit-xe:active{
+    background-color: rgb(195, 127, 0);
+}
+.success-message,.invalid-message {
+    display: none;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 .banggia, .imgbg{
     width: 90%;
     height: 600px;
@@ -272,8 +356,8 @@ footer{
     border-top-left-radius: 50% 30%;
     border-top-right-radius: 50% 30%;
     background-color: orange;
-    min-height: 210px;
-    position: absolute;
+    height: 210px;
+    margin-top: auto;
     bottom: 0;
 }
 
