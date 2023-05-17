@@ -59,6 +59,10 @@ header li{
 .menu a:hover{
     color: orange;
 }
+.menu a.active{
+    color: orange;
+    font-weight: bold;
+}
 #search-box{
     background: #01506e;
     line-height: 50px;    
@@ -248,6 +252,7 @@ article .news-list .news-item{
     height: 1.5px;
     width: 37%;
 }
+
 .lable p{
     color: white;
     margin-top: 5px;
@@ -314,6 +319,41 @@ article .news-list .news-item{
     margin-top: 30px;
     left: 50%;
     transform: translateX(-50%);
+}
+.custom-divider6{
+    margin: 20px 0;
+    color: #01506e;
+    font-size: x-large;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.custom-divider6::before, .custom-divider6::after{
+    content: "";
+    background: gainsboro;
+    height: 1.5px;
+    width: 36.5%;
+}
+.pic4{
+    width: 100%;
+    height: 500px;
+    margin: auto;
+}
+.thuexe{
+    position: relative;
+}
+.thue{
+    padding: 50px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    position: absolute;
+    border: 1px solid white;
+    float: left;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .banggia, .imgbg{
     width: 90%;

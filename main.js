@@ -12,4 +12,17 @@ function showSuccessMessage() {
         document.getElementById("invalid-message").style.display = "block";
       }
 }
-  
+
+function search() {
+  var selectedSeats = document.getElementById("seats").value;
+  var selectedCity = document.getElementById("city").value;
+  var selectedDate = document.getElementById("date").value;
+
+  // Thực hiện xử lý tìm kiếm kết quả tại đây
+  var results = "Kết quả tìm kiếm với: " +
+    "Số chỗ: " + selectedSeats +
+    ", Tỉnh thành: " + selectedCity +
+    ", Ngày nhận xe: " + selectedDate;
+
+  alert(results);
+}

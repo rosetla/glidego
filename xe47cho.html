@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/Car_Under_Magnifying_Glass-512.webp" type="image/x-icon">
+    <title>THUÊ XE 4 - 7 CHỖ</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "113263048432281");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v16.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div class="navbar">
+        <header>
+        <ul>
+            <li><a><img src="img/blue-car-logo-png.webp" alt=""></a></li>
+            <li><h2>GlideGo™</h2></li>
+        </ul>
+        <nav class="nav">
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href="xeke.html">XE KÉ HUẾ - ĐÀ NẴNG</a></li>
+                    <li><a class="active"  href="xe47cho.html">THUÊ XE 4 - 7 CHỖ</a></li>
+                    <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+                    <li><a href="lienhe.html">LIÊN HỆ</a></li>
+                    <li>
+                        <div class="search" id="search-box">
+                            <input type ="text" id="search-text" placeholder="Tìm kiếm thông tin">
+                            <button class="icon" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        </header>
+    </div>
+    <div style="clear: both"></div>
+    <div class="custom-divider6">THUÊ XE</div>
+    <div style="clear: both"></div>
+    <div class="thuexe">
+    <div class="Slide4">
+        <img class="pic4" src="img/photo-1485291571150-772bcfc10da5.avif" alt="" srcset="">
+    <form class="thue">
+        <h3>Chọn Xe</h3>
+      <label for="seats">Chọn số chỗ:</label>
+      <select id="seats">
+        <option value="4">4 chỗ</option>
+        <option value="4">5 chỗ</option>
+        <option value="6">6 chỗ</option>
+        <option value="7">7 chỗ</option>
+      </select>
+  
+      <br>
+  
+      <label for="city">Chọn tỉnh thành:</label>
+      <select id="city">
+        <option value="Hanoi">Đông Hà</option>
+        <option value="HCM">Quảng Trị</option>
+        <option value="Danang">Thừa Thiên Huế</option>
+        <option value="Danang">Đà Nẵng</option>
+        <option value="Danang">Hội An</option>
+      </select>
+  
+      <br>
+
+      <label for="date">Chọn ngày nhận xe:</label>
+      <input type="datetime-local" id="date">
+      <br>
+      <label for="date">Chọn ngày trả xe:</label>
+      <input type="datetime-local" id="date">
+      <br>
+      
+      <button type="button" onclick="search()">Tìm kiếm</button>
+    </form>
+    </div>
+    </div>
+    <div style="clear: both"></div>
+
+
+    <h3>Danh sách xe hơi</h3>
+    <div class="car-column">
+      <div class="car-item">
+        <img class="car-image" src="car1.jpg" alt="Car 1">
+        <div class="car-name">Xe A</div>
+        <div class="car-seats">Số chỗ: 4 chỗ</div>
+        <button class="book-button">Đặt xe</button>
+      </div>
+      <div class="car-item">
+        <img class="car-image" src="car1.jpg" alt="Car 1">
+        <div class="car-name">Xe A</div>
+        <div class="car-seats">Số chỗ: 4 chỗ</div>
+        <button class="book-button">Đặt xe</button>
+      </div>
+      <div class="car-item">
+        <img class="car-image" src="car1.jpg" alt="Car 1">
+        <div class="car-name">Xe A</div>
+        <div class="car-seats">Số chỗ: 4 chỗ</div>
+        <button class="book-button">Đặt xe</button>
+      </div>
+      <div class="car-item">
+        <img class="car-image" src="car2.jpg" alt="Car 2">
+        <div class="car-name">Xe B</div>
+        <div class="car-seats">Số chỗ: 5 chỗ</div>
+        <button class="book-button">Đặt xe</button>
+      </div>
+      <div class="car-item">
+        <img class="car-image" src="car2.jpg" alt="Car 2">
+        <div class="car-name">Xe B</div>
+        <div class="car-seats">Số chỗ: 5 chỗ</div>
+        <button class="book-button">Đặt xe</button>
+      </div>
+      <div class="car-item">
+        <img class="car-image" src="car2.jpg" alt="Car 2">
+        <div class="car-name">Xe B</div>
+        <div class="car-seats">Số chỗ: 5 chỗ</div>
+        <button class="book-button">Đặt xe</button>
+      </div>
+      <div class="car-item">
+        <img class="car-image" src="car3.jpg" alt="Car 3">
+        <div class="car-name">Xe C</div>
+        <div class="car-seats">Số chỗ: 7 chỗ</div>
+        <button class="book-button">Đặt xe</button>
+      </div>
+      <div class="car-item">
+        <img class="car-image" src="car3.jpg" alt="Car 3">
+        <div class="car-name">Xe C</div>
+        <div class="car-seats">Số chỗ: 7 chỗ</div>
+        <button class="book-button">Đặt xe</button>
+      </div>
+      <div class="car-item">
+        <img class="car-image" src="car3.jpg" alt="Car 3">
+        <div class="car-name">Xe C</div>
+        <div class="car-seats">Số chỗ: 7 chỗ</div>
+        <button class="book-button">Đặt xe</button>
+      </div>
+    </div>
+
+    <div style="clear: both"></div>
+        <div class="menuc">
+            <div class="itemc">
+                    <ul>
+                        <h4 id="Tende">GLIDEGO</h4>
+                        <li id="task"><a href="#">Đối tác GlideGo</a></li>
+                        <li id="task"><a href="#">Xe ghép GlideGo</a></li>
+                        <li id="task"><a href="#">Đánh giá GlideGoo</a></li>
+                    </ul>
+            </div>
+            <div class="itemc">
+                    <ul>
+                        <h4 id="Tende">THÔNG TIN</h4>
+                        <li id="task"><a href="#">Taxi Nội Bài</a></li>
+                        <li id="task"><a href="#">Du lịch GlideGo</a></li>
+                        <li id="task"><a href="#">Cho thuê tài xế</a></li>
+                    </ul>
+            </div>
+            <div class="itemc">
+                    <ul>
+                        <h4 id="Tende">CHÍNH SÁCH</h4>
+                        <li id="task"><a href="#">Điều khoản và dịch vụ</a></li>
+                        <li id="task"><a href="#">Quy định vận chuyển</a></li>
+                        <li id="task"><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div style="clear: both"></div>
+
+        <footer>
+            <h3 id="hde" style="margin-top: 30px;">CÔNG TY CỔ PHẦN DỊCH VỤ VẬN CHUYỂN GLIDEGO</h3>
+            <h4 id="hde">Giấy chứng nhận đăng ký doanh nghiệp số: 0207354326 do Sở Kế hoạch và Đầu tư thành phố Huế cấp ngày 31/01/2015 <br> Người đại diện theo pháp luật: LA MINH TUẤN  </h4>
+            <div class="DiaChi">
+                <img class="icon" src="img/locationicon.png">
+                <h4 id="hde">Tầng 3, Toà B (sảnh thương mại), GLIDEGO Complex, Số 39 Nguyễn Huệ, Vĩnh Ninh, Huế, Việt Nam (Google Map - <a href="https://www.google.com/maps/place/Tp.+Hu%E1%BA%BF,+Th%E1%BB%ABa+Thi%C3%AAn+Hu%E1%BA%BF,+Vi%E1%BB%87t+Nam/@16.4533744,107.4947109,12z/data=!3m1!4b1!4m6!3m5!1s0x3141a115e1a7935f:0xbf3b50af70b5c7b7!8m2!3d16.4637117!4d107.5908628!16zL20vMGc3c2w?hl=vi-VN" target="_blank">Click Here</a>)</h4>
+            </div>
+            <div class="Postal">
+                <img class="icon" src="img/link.png">
+                <h4 id="hde"><a href="index.html" target="_blank">glidego.vn</a> - Postal Code: 530000</h4>
+            </div>
+            <div class="Phone">
+                <img class="icon" src="img/telephone.png">
+                <h4 id="hde"><a href="tel:0817952388">0817952388</a></h4>
+            </div>
+            <div class="Mail">
+                <img class="icon" src="img/MAIL.png">
+                <h4 id="hde"><a href="mailto:hotrokh@glidego.vn">hotrokh@glidego.vn</a></h4>
+            </div>
+        </footer>
+</body>
+</html>
