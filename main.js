@@ -1,3 +1,9 @@
+$(document).ready(function(){
+  $('#toggle').click(function(){
+    $('.menu').slideToggle();
+  })
+})
+
 function showSuccessMessage() {
     var input1Value = document.getElementById("input1").value;
     var input2Value = document.getElementById("input2").value;
@@ -26,3 +32,4 @@ function search() {
 
   alert(results);
 }
+

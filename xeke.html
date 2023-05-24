@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="img/Car_Under_Magnifying_Glass-512.webp" type="image/x-icon">
     <title>XE KÉ HUẾ - ĐÀ NẴNG</title>
 </head>
+
 <body>
     <!-- Messenger Plugin chat Code -->
     <div id="fb-root"></div>
@@ -19,85 +25,117 @@
     </div>
 
     <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "113263048432281");
-      chatbox.setAttribute("attribution", "biz_inbox");
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "113263048432281");
+        chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
     <!-- Your SDK code -->
     <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v16.0'
-        });
-      };
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v16.0'
+            });
+        };
 
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     </script>
 
     <div class="navbar">
         <header>
-        <ul>
-            <li><a><img src="img/blue-car-logo-png.webp" alt=""></a></li>
-            <li><h2>GlideGo™</h2></li>
-        </ul>
-        <nav class="nav">
-            <div class="menu">
-                <ul>
-                    <li><a href="index.html">TRANG CHỦ</a></li>
-                    <li><a class="active"  href="xeke.html">XE KÉ HUẾ - ĐÀ NẴNG</a></li>
-                    <li><a href="xe47cho.html">THUÊ XE 4 - 7 CHỖ</a></li>
-                    <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
-                    <li><a href="lienhe.html">LIÊN HỆ</a></li>
-                    <li>
-                        <div class="search" id="search-box">
-                            <input type ="text" id="search-text" placeholder="Tìm kiếm thông tin">
-                            <button class="icon" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+            <ul>
+                <li><a><img src="img/blue-car-logo-png.webp" alt=""></a></li>
+                <li>
+                    <h2>GlideGo™</h2>
+                </li>
+            </ul>
+            <nav class="nav">
+                <div id="toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="menu">
+                    <ul class="main_menu">
+                        <li><a href="index.html">TRANG CHỦ</a></li>
+                        <li><a class="active" href="xeke.html">XE KÉ HUẾ - ĐÀ NẴNG</a></li>
+                        <li><a href="xe47cho.html">THUÊ XE 4 - 7 CHỖ</a></li>
+                        <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+                        <li><a href="lienhe.html">LIÊN HỆ</a></li>
+                        <li>
+                            <div class="search" id="search-box">
+                                <form method="post" action="index.php">
+                                    <input name="option" type="text" list="topics" id="search-text"
+                                        placeholder="Tìm kiếm thông tin">
+                                    <datalist id="topics">
+                                        <option value="Đi Đà nẵng"></option>
+                                        <option value="Gía xe vào đà nẵng"></option>
+                                        <option value="Địa điểm du lịch ở Huế"></option>
+                                        <option value="Địa điểm du lịch ở Đà nẵng"></option>
+                                        <option value="Địa điểm du lịch ở Hội An"></option>
+                                        <option value="Hình thức thuê xe"></option>
+                                        <option value="Gía thuê xe"></option>
+                                    </datalist>
+                                    <button class="icon" id="search-btn"><i
+                                            class="fa-solid fa-magnifying-glass"></i></button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </header>
     </div>
     <div style="clear: both"></div>
     <div class="datxe">
         <div class="custom-divider5">ĐẶT XE</div>
         <div class="Slide3">
-            <img width="100%" height="500px" src="img/lightened-luxury-sedan-car-against-night-city-with-headlamps-rear-tail-lights-lit_1284-28804.avif" alt="">
+            <img width="100%" height="500px"
+                src="img/lightened-luxury-sedan-car-against-night-city-with-headlamps-rear-tail-lights-lit_1284-28804.avif"
+                alt="">
             <form id="form-id" class="form-dat-ve" onsubmit="event.preventDefault(); showSuccessMessage();">
                 <div class="row-form">
                     <div class="left">
-                        <label class="lable"><p>Tên của bạn:</p></label>
+                        <label class="lable">
+                            <p>Tên của bạn:</p>
+                        </label>
                         <br>
                         <span class="span-name">
-                            <input id="input1" class="iinput" type="text" name="text-n" value size="40" aria-required="true" aria-invalid="false" class="spann" placeholder="Họ và tên...">
+                            <input id="input1" class="iinput" type="text" name="text-n" value size="40"
+                                aria-required="true" aria-invalid="false" class="spann" placeholder="Họ và tên...">
                         </span>
                         <br>
-                        <label class="lable"><p>Số điện thoại:</p></label>
+                        <label class="lable">
+                            <p>Số điện thoại:</p>
+                        </label>
                         <br>
                         <span class="span-phone">
-                            <input id="input2" class="iinput" type="tel" name="phone-n" value size="40" aria-required="true" aria-invalid="false" placeholder="Số điện thoại...">
+                            <input id="input2" class="iinput" type="tel" name="phone-n" value size="40"
+                                aria-required="true" aria-invalid="false" placeholder="Số điện thoại...">
                         </span>
                     </div>
                     <div class="right">
-                        <label class="lable"><p>Thời gian đón:</p></label>
+                        <label class="lable">
+                            <p>Thời gian đón:</p>
+                        </label>
                         <br>
                         <span class="span-time">
-                            <input class="iinput" name="thoigian-n" id="input3" type="datetime-local" placeholder="Chọn thời gian đón..." value="19/05/2023 06:00">
+                            <input class="iinput" name="thoigian-n" id="input3" type="datetime-local"
+                                placeholder="Chọn thời gian đón..." value="19/05/2023 06:00">
                         </span>
                         <br>
-                        <label class="lable"><p>Địa điểm đón (bao nhiêu người):</p></label>
+                        <label class="lable">
+                            <p>Địa điểm đón (bao nhiêu người):</p>
+                        </label>
                         <br>
                         <span class="span-place">
-                            <input id="input4" class="iinput"  name="diadiem-n" value size="40" aria-required="true" aria-invalid="false" placeholder="Địa điểm đón...">
+                            <input id="input4" class="iinput" name="diadiem-n" value size="40" aria-required="true"
+                                aria-invalid="false" placeholder="Địa điểm đón...">
                         </span>
                     </div>
                 </div>
@@ -105,7 +143,7 @@
                     <input type="submit" value="ĐẶT XE" class="submit-xe">
                 </p>
                 <div id="confirm" class="hidden">
-                    <p id="success-message" class="success-message"  style="color: white">Đã gửi thành công!</p>
+                    <p id="success-message" class="success-message" style="color: white">Đã gửi thành công!</p>
                     <p id="invalid-message" class="invalid-message" style="color: white">Không hợp lệ!</p>
                 </div>
             </form>
@@ -114,38 +152,42 @@
     <div style="clear: both"></div>
     <div class="menuc">
         <div class="itemc">
-                <ul>
-                    <h4 id="Tende">GLIDEGO</h4>
-                    <li id="task"><a href="#">Đối tác GlideGo</a></li>
-                    <li id="task"><a href="#">Xe ghép GlideGo</a></li>
-                    <li id="task"><a href="#">Đánh giá GlideGoo</a></li>
-                </ul>
+            <ul>
+                <h4 id="Tende">GLIDEGO</h4>
+                <li id="task"><a href="#">Đối tác GlideGo</a></li>
+                <li id="task"><a href="#">Xe ghép GlideGo</a></li>
+                <li id="task"><a href="#">Đánh giá GlideGoo</a></li>
+            </ul>
         </div>
         <div class="itemc">
-                <ul>
-                    <h4 id="Tende">THÔNG TIN</h4>
-                    <li id="task"><a href="#">Taxi Nội Bài</a></li>
-                    <li id="task"><a href="#">Du lịch GlideGo</a></li>
-                    <li id="task"><a href="#">Cho thuê tài xế</a></li>
-                </ul>
+            <ul>
+                <h4 id="Tende">THÔNG TIN</h4>
+                <li id="task"><a href="#">Taxi Nội Bài</a></li>
+                <li id="task"><a href="#">Du lịch GlideGo</a></li>
+                <li id="task"><a href="#">Cho thuê tài xế</a></li>
+            </ul>
         </div>
         <div class="itemc">
-                <ul>
-                    <h4 id="Tende">CHÍNH SÁCH</h4>
-                    <li id="task"><a href="#">Điều khoản và dịch vụ</a></li>
-                    <li id="task"><a href="#">Quy định vận chuyển</a></li>
-                    <li id="task"><a href="#">Chính sách bảo mật</a></li>
-                </ul>
+            <ul>
+                <h4 id="Tende">CHÍNH SÁCH</h4>
+                <li id="task"><a href="#">Điều khoản và dịch vụ</a></li>
+                <li id="task"><a href="#">Quy định vận chuyển</a></li>
+                <li id="task"><a href="#">Chính sách bảo mật</a></li>
+            </ul>
         </div>
     </div>
     <div style="clear: both"></div>
 
     <footer>
         <h3 id="hde" style="margin-top: 30px;">CÔNG TY CỔ PHẦN DỊCH VỤ VẬN CHUYỂN GLIDEGO</h3>
-        <h4 id="hde">Giấy chứng nhận đăng ký doanh nghiệp số: 0207354326 do Sở Kế hoạch và Đầu tư thành phố Huế cấp ngày 31/01/2015 <br> Người đại diện theo pháp luật: LA MINH TUẤN  </h4>
+        <h4 id="hde">Giấy chứng nhận đăng ký doanh nghiệp số: 0207354326 do Sở Kế hoạch và Đầu tư thành phố Huế cấp ngày
+            31/01/2015 <br> Người đại diện theo pháp luật: LA MINH TUẤN </h4>
         <div class="DiaChi">
             <img class="icon" src="img/locationicon.png">
-            <h4 id="hde">Tầng 3, Toà B (sảnh thương mại), GLIDEGO Complex, Số 39 Nguyễn Huệ, Vĩnh Ninh, Huế, Việt Nam (Google Map - <a href="https://www.google.com/maps/place/Tp.+Hu%E1%BA%BF,+Th%E1%BB%ABa+Thi%C3%AAn+Hu%E1%BA%BF,+Vi%E1%BB%87t+Nam/@16.4533744,107.4947109,12z/data=!3m1!4b1!4m6!3m5!1s0x3141a115e1a7935f:0xbf3b50af70b5c7b7!8m2!3d16.4637117!4d107.5908628!16zL20vMGc3c2w?hl=vi-VN" target="_blank">Click Here</a>)</h4>
+            <h4 id="hde">Tầng 3, Toà B (sảnh thương mại), GLIDEGO Complex, Số 39 Nguyễn Huệ, Vĩnh Ninh, Huế, Việt Nam
+                (Google Map - <a
+                    href="https://www.google.com/maps/place/Tp.+Hu%E1%BA%BF,+Th%E1%BB%ABa+Thi%C3%AAn+Hu%E1%BA%BF,+Vi%E1%BB%87t+Nam/@16.4533744,107.4947109,12z/data=!3m1!4b1!4m6!3m5!1s0x3141a115e1a7935f:0xbf3b50af70b5c7b7!8m2!3d16.4637117!4d107.5908628!16zL20vMGc3c2w?hl=vi-VN"
+                    target="_blank">Click Here</a>)</h4>
         </div>
         <div class="Postal">
             <img class="icon" src="img/link.png">
@@ -161,4 +203,5 @@
         </div>
     </footer>
 </body>
+
 </html>
